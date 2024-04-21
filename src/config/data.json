@@ -1,0 +1,128 @@
+{
+    "playstation-games": {
+        "final-fantasy-vii": {
+            "background_image": "https://example.com/final-fantasy-vii-bg.jpg",
+            "esrb_rating": "Teen",
+            "genres": [
+                "RPG"
+            ],
+            "metacritic": 92,
+            "name": "Final Fantasy VII",
+            "price": [
+                {
+                    "amount": 180,
+                    "type": "loose"
+                },
+                {
+                    "amount": 320,
+                    "type": "CIB"
+                },
+                {
+                    "amount": 500,
+                    "type": "new"
+                }
+            ],
+            "rating": 5,
+            "released": "1997-01-31",
+            "short_screenshots": [
+                "https://example.com/final-fantasy-vii-1.jpg",
+                "https://example.com/final-fantasy-vii-2.jpg",
+                "https://example.com/final-fantasy-vii-3.jpg"
+            ],
+            "slug": "final-fantasy-vii"
+        },
+        "crash-bandicoot": {
+            "background_image": "https://example.com/crash-bandicoot-bg.jpg",
+            "esrb_rating": "Everyone",
+            "genres": [
+                "Platformer"
+            ],
+            "metacritic": 80,
+            "name": "Crash Bandicoot",
+            "price": [
+                {
+                    "amount": 90,
+                    "type": "loose"
+                },
+                {
+                    "amount": 150,
+                    "type": "CIB"
+                },
+                {
+                    "amount": 240,
+                    "type": "new"
+                }
+            ],
+            "rating": 4,
+            "released": "1996-09-09",
+            "short_screenshots": [
+                "https://example.com/crash-bandicoot-1.jpg",
+                "https://example.com/crash-bandicoot-2.jpg",
+                "https://example.com/crash-bandicoot-3.jpg"
+            ],
+            "slug": "crash-bandicoot"
+        },
+        "tekken-3": {
+            "background_image": "https://example.com/tekken-3-bg.jpg",
+            "esrb_rating": "Teen",
+            "genres": [
+                "Fighting"
+            ],
+            "metacritic": 96,
+            "name": "Tekken 3",
+            "price": [
+                {
+                    "amount": 110,
+                    "type": "loose"
+                },
+                {
+                    "amount": 170,
+                    "type": "CIB"
+                },
+                {
+                    "amount": 290,
+                    "type": "new"
+                }
+            ],
+            "rating": 5,
+            "released": "1998-03-20",
+            "short_screenshots": [
+                "https://example.com/tekken-3-1.jpg",
+                "https://example.com/tekken-3-2.jpg",
+                "https://example.com/tekken-3-3.jpg"
+            ],
+            "slug": "tekken-3"
+        },
+        "spyro-the-dragon": {
+            "background_image": "https://example.com/spyro-the-dragon-bg.jpg",
+            "esrb_rating": "Everyone",
+            "genres": [
+                "Platformer"
+            ],
+            "metacritic": 85,
+            "name": "Spyro the Dragon",
+            "price": [
+                {
+                    "amount": 75,
+                    "type": "loose"
+                },
+                {
+                    "amount": 120,
+                    "type": "CIB"
+                },
+                {
+                    "amount": 210,
+                    "type": "new"
+                }
+            ],
+            "rating": 4,
+            "released": "1998-09-10",
+            "short_screenshots": [
+                "https://example.com/spyro-the-dragon-1.jpg",
+                "https://example.com/spyro-the-dragon-2.jpg",
+                "https://example.com/spyro-the-dragon-3.jpg"
+            ],
+            "slug": "spyro-the-dragon"
+        }
+    }
+}
