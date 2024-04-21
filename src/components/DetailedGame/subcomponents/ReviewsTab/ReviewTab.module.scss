@@ -1,0 +1,59 @@
+.reviewsContainer {
+    background-color: #001879;
+    border: 7px solid #c2c3c1;
+    color: rgb(247, 239, 239);
+    border-radius: 10px;
+    box-shadow: inset 0 0 50px 0 rgba(0, 0, 0, 0.733);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin: 0 0px 5px 40px;
+    width: 50vw;
+    height: 30vh;
+    h3 {
+        text-align: center;
+        margin: 10px 0 5px 0;
+        font-size: 30px;
+    }
+}
+
+.ratingInfo {
+    display: flex;
+}
+
+.ratingRow {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    margin-left: 20px;
+    align-items: center
+}
+
+.ratingBarContainer {
+    border: 3px solid #9e9e9d;
+    height: 20px;
+    width: 250px;
+    background-color:#747474;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+    position: relative;
+    box-shadow: inset 0 0 5px 0 rgba(102, 95, 95, 0.993);
+}
+
+.ratingBar {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.397), rgba(0,0,0, 0.25), transparent);
+}
+
+.ratingPercent
+{
+text-align: center;
+}
+
+.noReviews {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-style: italic;
+}

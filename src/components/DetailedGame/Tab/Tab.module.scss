@@ -1,0 +1,14 @@
+.tab {
+    position: relative; 
+    cursor:default;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+    font-weight: normal;
+
+    .handCursor {
+        position: absolute;
+        top: 15px;
+        left: 5px;
+        transform: translateX(-100%); 
+    }
+}

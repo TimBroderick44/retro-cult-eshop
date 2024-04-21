@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "react-eshop-retrocult",
+  "private_key_id": "5db46edab4fade3f0d73f684eb3fa1182d2b8d8e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCq3qqRN6tD1/yh\nuLPzfyQuUTDckdBDNqvd3TnowRDnInI9UMA2TQdETeoMsPa4edqfsP/L8tTCCMh4\njW6orDH5T2f/P47f2NM2tmoQLWU3YiZoRGrEfk4+mQUpRFJUkpwEZk2ghFuKcsy6\nybFxOSou3SbbhZKDLYL/Yoe2gBa33bM62Sp/rzunEfQ5F1j26tSb1AbOzo5IH02r\nZbiqatvSrY8A3oC2auJ5ssi11rOqB9Lf89t4i4Lc61JldKBS0KKMNiegv7AlI/Tc\nqpH7vQK8XxGetF5jZQ71bwIfJEXhKGBJKfzL/vQsVOspWMUhVdoms/SMxh98io21\nKPSCq0sHAgMBAAECggEAUEx07uqw7yCdBiklVCxvRd787eMOcs/KA+k3kiTM+zoK\nYrtEoSAg5p4Q/Cbbw0Tsk3hcNa2oA4maIGEi3FyT3ZxN/LuTOqoMVF10SabztovH\nDd/9JttOjQdfUA3d/QWrETw8hc89r7oUcUFgxJs/MifW33oNqNzl/3t/2KmoQ35E\nBOkjIsbiOceMpir2fbCfU4H7OqqNrdaDZ85QCGiajNjEDtMnadW+0KTJNhoZPq+g\n4cW+NPDgiwL5aNYd979N9Da7U8dNiNHMrCamznOoUZSX4BEYVHsfKjpRhVee5/X+\nIoHBeiGj67omylziOCWiGwz7zw4NOkmR0AFFF101NQKBgQDrtpypFTHTzExDDEk+\nIdyzuaORMmt0huk61WIZOlncozVDgqtIyg+KdBNVnzuiNTl0SM86zB4jx/mNWhQm\nXK+V4SIYIEBQDFvjVWZbmVRHbwypyfReDSa8Tvf5J6HxxUog3ALFQPfbG7ExtMd6\ncUg1u8q4o5ZekSmo5XVwGJm6iwKBgQC5k2Ey6cKkKE8u2iDAKaRrVXm4YXXYfTRI\n0gS0aEbeKoJVIU1nWidyL2k7Idlzo/hR76Hw4BpSPqVi6ddskVBJEnVesPB5taHQ\n+AE89EpxvO/6cl05tNGf2I3FS/eTrdeBf8xR+OmhkCm/nD5ulU5jH+XZF51ppeDs\nlA+wck/M9QKBgHu4kwwQyuGPpyu+JCePoIdZVihdHZfBRGQUInR5czdjFw8DZCJF\npNiYSpmzhZqDc0+888C56MwBJ9RwxojIN4Vk8P9W1krt4cE2Tw6fMWR5Pl1UWoaP\nQpiunmvRyKfdVSZgNLgSfMYuB9i+OcHj+fHyStqVStUCPqqfHgAjeXU3AoGAPVmN\nzqkdIev5kYGnRh/+LUXKwbvmm7V4rYJQ79txYk0nXUFvN3XEiKlH3raoDuTsWRoh\nrWJJEVuIjZTFFS1NH3sstitEtNfpMQ5sSlxwp/1QULmyPDuc+X08ETe2F2pnTnaT\nc54YjsL8Kk5bDW/qxDZtZEG8VoryOwQP08NWwmkCgYAzaWVuggLHq2y5n4xnpKi7\newLJvjtSQ//BfJrEsYAYsHWr6Eh+3ir67RhOVpMBHdgy2JPvqWpiSf9U7v2eqFY0\n4VAUwqPBGtnsJcSqRQQF8u1zne+KRykxXKKHLEqF4jibq6eV3twFAyhlMpeQWG5s\nBDerQh6A585mLV3uwM3VWA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-jp45c@react-eshop-retrocult.iam.gserviceaccount.com",
+  "client_id": "115849222039530736609",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-jp45c%40react-eshop-retrocult.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
