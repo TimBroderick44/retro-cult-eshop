@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext.jsx";
 import style from "./CartPage.module.scss";
 
 const CartPage = () => {
-    const { cartItems, removeFromCart } = useContext(CartContext);
+    const { cartItems, removeFromCart, cartTotal } = useContext(CartContext);
 
     return (
         <div className={style.cartcontainer}>
