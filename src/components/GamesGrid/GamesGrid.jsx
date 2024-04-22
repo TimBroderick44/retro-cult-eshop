@@ -20,7 +20,8 @@ const GamesGrid = ({ games, setGames }) => {
     const [moveSound, setMoveSound] = useState(null);
     const [topGenres, setTopGenres] = useState([]);
     const [selectedEsrbRating, setSelectedEsrbRating] = useState(null);
-    const [esrbRatingFilterVisible, setEsrbRatingFilterVisible] =useState(false);
+    const [esrbRatingFilterVisible, setEsrbRatingFilterVisible] =
+        useState(false);
     const [esrbRatings, setEsrbRatings] = useState([]);
     const { cartTotal } = useContext(CartContext);
     const { currentPage, setCurrentPage } = useContext(SearchContext);
@@ -52,7 +53,7 @@ const GamesGrid = ({ games, setGames }) => {
     }, []);
 
     // There was no way to get all genres to fit so this limits it to the top 10 genres
-    // Afterwards, all genres will appear. 
+    // Afterwards, all genres will appear.
     useEffect(() => {
         const genreCount = {};
         games.forEach((game) => {
@@ -138,142 +139,156 @@ const GamesGrid = ({ games, setGames }) => {
     };
 
     return (
-        <div className={style.flex}>
-            <div className={style.gridContainer}>
-                <div className={style.filtersContainer}>
-                    <h2>Filters:</h2>
-                    {/* // Map each of them into a div element with the filter name
+        <>
+            <div className={style.flex}>
+                <div className={style.gridContainer}>
+                    <div className={style.filtersContainer}>
+                        <h2>Filters:</h2>
+                        {/* // Map each of them into a div element with the filter name
                     // Some of them have onClick events */}
-                    <div className={style.filters}>
-                        {[
-                            "Rating",
-                            "Metacritic",
-                            "Price Highest",
-                            "Price Lowest",
-                            "ESRB",
-                            "Genre",
-                        ].map((filter, index) => (
-                            <div
-                                key={index}
-                                onClick={() => {
-                                    setSortCriteria(filter.toLowerCase());
-                                    if (filter === "Genre") {
-                                        setEsrbRatingFilterVisible(false);
-                                        setGenreFilterVisible(
-                                            !genreFilterVisible
-                                        );
+                        <div className={style.filters}>
+                            {[
+                                "Rating",
+                                "Metacritic",
+                                "Price Highest",
+                                "Price Lowest",
+                                "ESRB",
+                                "Genre",
+                            ].map((filter, index) => (
+                                <div
+                                    key={index}
+                                    onClick={() => {
+                                        setSortCriteria(filter.toLowerCase());
+                                        if (filter === "Genre") {
+                                            setEsrbRatingFilterVisible(false);
+                                            setGenreFilterVisible(
+                                                !genreFilterVisible
+                                            );
+                                        }
+                                        if (filter === "ESRB") {
+                                            setGenreFilterVisible(false);
+                                            setEsrbRatingFilterVisible(
+                                                !esrbRatingFilterVisible
+                                            );
+                                        }
+                                    }}
+                                    onMouseEnter={() => {
+                                        setHoveredFilterIndex(index);
+                                        moveSound?.play();
+                                    }}
+                                    onMouseLeave={() =>
+                                        setHoveredFilterIndex(null)
                                     }
-                                    if (filter === "ESRB") {
-                                        setGenreFilterVisible(false);
-                                        setEsrbRatingFilterVisible(
-                                            !esrbRatingFilterVisible
-                                        );
-                                    }
-                                }}
-                                onMouseEnter={() => {
-                                    setHoveredFilterIndex(index);
-                                    moveSound?.play();
-                                }}
-                                onMouseLeave={() => setHoveredFilterIndex(null)}
-                                className={style.filterItem}
-                            >
-                                {hoveredFilterIndex === index && (
-                                    <img
-                                        src={handCursorUrl}
-                                        className={style.handCursor}
-                                        alt="Cursor"
-                                    />
-                                )}
-                                {filter}
-                            </div>
+                                    className={style.filterItem}
+                                >
+                                    {hoveredFilterIndex === index && (
+                                        <img
+                                            src={handCursorUrl}
+                                            className={style.handCursor}
+                                            alt="Cursor"
+                                        />
+                                    )}
+                                    {filter}
+                                </div>
+                            ))}
+                            {/* Map over and show all genres applicable */}
+                            {genreFilterVisible && (
+                                <div className={style.genres}>
+                                    {topGenres.map((genre, index) => (
+                                        <div
+                                            key={genre}
+                                            onClick={() =>
+                                                handleGenreClick(genre)
+                                            }
+                                            onMouseEnter={() => {
+                                                setHoveredGenreIndex(index);
+                                                moveSound.play();
+                                            }}
+                                            onMouseLeave={() =>
+                                                setHoveredGenreIndex(null)
+                                            }
+                                            className={style.genreItem}
+                                        >
+                                            {hoveredGenreIndex === index && (
+                                                <img
+                                                    src={handCursorUrl}
+                                                    className={style.handCursor}
+                                                    alt="Cursor"
+                                                />
+                                            )}
+                                            {genre}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {/* Map over and show all ESRB ratings applicable */}
+                            {esrbRatingFilterVisible && (
+                                <div className={style.esrbRatings}>
+                                    {esrbRatings.map((rating, index) => (
+                                        <div
+                                            key={rating}
+                                            onClick={() =>
+                                                handleESRBClick(rating)
+                                            }
+                                            onMouseEnter={() => {
+                                                setHoveredESRBIndex(index);
+                                                moveSound.play();
+                                            }}
+                                            onMouseLeave={() =>
+                                                setHoveredESRBIndex(null)
+                                            }
+                                            className={style.ESRBItem}
+                                        >
+                                            {hoveredESRBIndex === index && (
+                                                <img
+                                                    src={handCursorUrl}
+                                                    className={style.handCursor}
+                                                    alt="Cursor"
+                                                />
+                                            )}
+                                            {rating}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                    <div className={style.grid}>
+                        {currentGames.map((game) => (
+                            <Game
+                                key={game.id}
+                                game={game}
+                                onClick={() => handleSelectGame(game)}
+                            />
                         ))}
                     </div>
-                </div>
-                <div className={style.grid}>
-                    {currentGames.map((game) => (
-                        <Game
-                            key={game.id}
-                            game={game}
-                            onClick={() => handleSelectGame(game)}
+                    {/* Use  the cart context to get the total cart price */}
+                    <div className={style.time}>
+                        <p>Total Cart Price: ${cartTotal}</p>
+                    </div>
+                    <div className={style.store}>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/134px-Playstation_logo_colour.svg.png"
+                            alt="Logo"
                         />
-                    ))}
-                </div>
-                {/* Use  the cart context to get the total cart price */}
-                <div className={style.time}>
-                    <p>Total Cart Price: ${cartTotal}</p>
-                </div>
-                <div className={style.store}>
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/134px-Playstation_logo_colour.svg.png"
-                        alt="Logo"
-                    />
-                    Retro Cult Games
-                </div>
-                <div className={style.pagination}>
-                    <button onClick={prevPage} disabled={currentPage === 1}>
-                        Previous
-                    </button>
-                    <button
-                        onClick={nextPage}
-                        disabled={currentPage * gamesPerPage >= games.length}
-                    >
-                        Next
-                    </button>
+                        Retro Cult Games
+                    </div>
+                    <div className={style.pagination}>
+                        <button onClick={prevPage} disabled={currentPage === 1}>
+                            Previous
+                        </button>
+                        <button
+                            onClick={nextPage}
+                            disabled={
+                                currentPage * gamesPerPage >= games.length
+                            }
+                        >
+                            Next
+                        </button>
+                    </div>
                 </div>
             </div>
-            {/* Map over and show all genres applicable */}
-            {genreFilterVisible && (
-                <div className={style.genres}>
-                    {topGenres.map((genre, index) => (
-                        <div
-                            key={genre}
-                            onClick={() => handleGenreClick(genre)}
-                            onMouseEnter={() => {
-                                setHoveredGenreIndex(index);
-                                moveSound.play();
-                            }}
-                            onMouseLeave={() => setHoveredGenreIndex(null)}
-                            className={style.genreItem}
-                        >
-                            {hoveredGenreIndex === index && (
-                                <img
-                                    src={handCursorUrl}
-                                    className={style.handCursor}
-                                    alt="Cursor"
-                                />
-                            )}
-                            {genre}
-                        </div>
-                    ))}
-                </div>
-            )}
-            {/* Map over and show all ESRB ratings applicable */}
-            {esrbRatingFilterVisible && (
-                <div className={style.esrbRatings}>
-                    {esrbRatings.map((rating, index) => (
-                        <div
-                            key={rating}
-                            onClick={() => handleESRBClick(rating)}
-                            onMouseEnter={() => {
-                                setHoveredESRBIndex(index);
-                                moveSound.play();
-                            }}
-                            onMouseLeave={() => setHoveredESRBIndex(null)}
-                            className={style.ESRBItem}
-                        >
-                            {hoveredESRBIndex === index && (
-                                <img
-                                    src={handCursorUrl}
-                                    className={style.handCursor}
-                                    alt="Cursor"
-                                />
-                            )}
-                            {rating}
-                        </div>
-                    ))}
-                </div>
-            )}
-        </div>
+        </>
     );
 };
 

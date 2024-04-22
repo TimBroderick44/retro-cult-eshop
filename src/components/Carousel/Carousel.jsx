@@ -28,8 +28,8 @@ const Carousel = ({
             spaceBetween={50}
             slidesPerView={1}
             style={{
-                width: "100%",
-                height: "100%",
+                width: "90%",
+                height: "47%",
                 ...swiperStyle,
             }}
         >
@@ -38,7 +38,7 @@ const Carousel = ({
                     <img
                         src={slide.url}
                         alt={slide.alt || "Slide image"}
-                        style={{ width: "100%" }}
+                        style={{ width: "100%", height: "100%"}}
                     />
                 </SwiperSlide>
             ))}

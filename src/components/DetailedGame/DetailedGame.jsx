@@ -113,9 +113,7 @@ const DetailedGame = ({
                             autoplayDelay={5000}
                             navigationEnabled={true}
                             swiperStyle={{
-                                width: "80%",
-                                height: "200px",
-                                marginTop: "10px",
+                                marginTop: "20px",
                                 borderRadius: "15px",
                                 boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
                             }}

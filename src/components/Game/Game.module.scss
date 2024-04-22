@@ -38,6 +38,7 @@
     grid-template-columns: auto 1fr;
     color: white;
     margin-left: 0;
+    text-align: center;
 }
 
 .HP,
@@ -84,4 +85,47 @@
             transparent
         );
     }
+}
+
+@media (min-width: 1300px) {
+.gameCard {
+    min-height: 200px;
+    max-height: 200px; 
+    margin-top: 0px;
+
+    .gameImage {
+        width: 180px;
+        height: 200px;
+    }
+    .gameDetails {
+        margin-top: 20px;
+        h3 {
+            font-size: 42px;
+            margin: 0;
+            margin-bottom: 0px;
+            height: 50px;
+        }
+    }
+}
+
+.stats {
+    font-size: 44px;
+    margin-top: 10px
+}
+
+.HP,
+.MP,
+.gil {
+    font-size: 42px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.HP {
+    border-bottom: #3078ff 10px solid;
+}
+
+.MP {
+    border-bottom: #14e27b 10px solid;
+}
 }
