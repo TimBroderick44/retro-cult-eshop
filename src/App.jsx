@@ -21,13 +21,13 @@ function App() {
                         <NavBar />
                         <Routes>
                             <Route path="/retro-cult-eshop" element={<LandingPage />} />
-                            <Route path="/cart" element={<CartPage />} />
-                            <Route path="/games" element={<GamesPage />} />
+                            <Route path="/retro-cult-eshop/cart" element={<CartPage />} />
+                            <Route path="/retro-cult-eshop/games" element={<GamesPage />} />
                             <Route
-                                path="/games/:slug"
+                                path="/retro-cult-eshop/games/:slug"
                                 element={<GameDetailsPage />}
                             />
-                            <Route path="/login" element={<LoginPage />} />
+                            <Route path="/retro-cult-eshop/login" element={<LoginPage />} />
                             <Route path="*" element={<NotFoundPage />} />
                         </Routes>
                     </BrowserRouter>
