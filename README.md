@@ -20,7 +20,7 @@ This is a fun mock eshop that was designed to refine my skills in React. It was 
 
 ![Such detail](./src/assets/screenshots/GameDetails.png)
 
-## 4. Imagine Being to Buy All Your Favourite PSX Games!
+## 4. Imagine Being Able to Buy All Your Favourite PSX Games!
 
 ![Such simple.....](./src/assets/screenshots/cartpopup.png)
 ![Such simple.....](./src/assets/screenshots/cart.png)
