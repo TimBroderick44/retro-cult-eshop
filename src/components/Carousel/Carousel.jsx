@@ -36,7 +36,7 @@ const Carousel = ({
             {slides.map((slide, index) => (
                 <SwiperSlide key={index} style={slideStyle}>
                     <img
-                        src={slide.url}
+                        src={slide.src || slide.url}
                         alt={slide.alt || "Slide image"}
                         style={{ width: "100%", height: "100%"}}
                     />

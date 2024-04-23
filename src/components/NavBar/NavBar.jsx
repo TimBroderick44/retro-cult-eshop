@@ -2,14 +2,17 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import style from "./NavBar.module.scss";
+import trolley from "../../assets/images/trolley.png";
+import user from "../../assets/images/user.png";
+import PSLogo from "../../assets/images/PSLogo.png";
 
 const NavBar = () => {
 
     return (
         <nav className={style.nav}>
-            <NavLink className={style.store} to="/">
+            <NavLink className={style.store} to="/retro-cult-eshop">
                     <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/134px-Playstation_logo_colour.svg.png"
+                        src= {PSLogo}
                         alt="Logo"
                     />
                     <p className={style.storeName}>Retro Cult Games</p>
@@ -17,11 +20,11 @@ const NavBar = () => {
             <SearchBar />
             <div className={style.buttons}>
                 <NavLink className={style.cart} to="/cart">
-                    <img src="/trolley.png" alt="cart" />
+                    <img src={trolley} alt="cart" />
                 </NavLink>
                 <NavLink className={style.login} to="/login">
                     <img
-                        src="/user.png"
+                        src= {user}
                         alt="login"
                         className={`${style.img} ${style.user}`}
                     />

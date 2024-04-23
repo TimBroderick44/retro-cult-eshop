@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Game.module.scss";
+import hagrid from "../../assets/images/hagrid.jpeg";
 
 const Game = ({ game, onClick }) => {
     const { name, price, background_image, rating } = game;
@@ -13,7 +14,7 @@ const Game = ({ game, onClick }) => {
     return (
         <div className={style.gameCard} onClick={onClick}>
             <img
-                src={background_image || "/hagrid.jpeg"}
+                src={background_image || hagrid}
                 alt={name}
                 className={style.gameImage}
             />

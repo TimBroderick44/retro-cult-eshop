@@ -1,6 +1,20 @@
 import React from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import Navigators from "../../components/Navigators/Navigators";
+import sephiroth from "../../assets/images/sephiroth.jpg";
+import chrono from "../../assets/images/chrono.jpg";
+import tomba from "../../assets/images/tomba.png";
+import crash from "../../assets/images/crash.webp";
+import residentevil2 from "../../assets/images/residentevil2.jpg";
+import ff9 from "../../assets/images/ff9.avif";
+import medieval from "../../assets/images/medieval.jpg";
+import cloud from "../../assets/images/cloud.avif";
+import ff8Castle from "../../assets/images/ff8Castle.avif";
+import mixed from "../../assets/images/mixed.avif";
+import mmg from "../../assets/images/mmg.avif";
+import PSMagazine from "../../assets/images/PSMagazine.webp";
+import PSMontage from "../../assets/images/PSMontage.jpg";
+
 
 // Array of objects containing the path and label for each link to use later in the Navigators component
 const links = [
@@ -19,34 +33,19 @@ const LandingPage = () => {
             <Carousel
                 className="carousel"
                 slides={[
-                    {
-                        url: "sephiroth.jpg",
-                        alt: "Promotional Banner 0",
-                    },
-                    {
-                        url: "chrono.jpg",
-                        alt: "Promotional Banner 1",
-                    },
-                    {
-                        url: "tomba.png",
-                        alt: "Promotional Banner 2",
-                    },
-                    {
-                        url: "crash.webp",
-                        alt: "Promotional Banner 3",
-                    },
-                    {
-                        url: "residentevil2.jpg",
-                        alt: "Promotional Banner 4",
-                    },
-                    {
-                        url: "ff9.avif",
-                        alt: "Promotional Banner 5",
-                    },
-                    {
-                        url: "medieval.jpg",
-                        alt: "Promotional Banner 6",
-                    },
+                    { src: sephiroth, alt: "Sephiroth" },
+                    { src: chrono, alt: "Chrono" },
+                    { src: tomba, alt: "Tomba" },
+                    { src: crash, alt: "Crash" },
+                    { src: residentevil2, alt: "Resident Evil 2" },
+                    { src: ff9, alt: "Final Fantasy 9" },
+                    { src: medieval, alt: "Medieval" },
+                    { src: cloud, alt: "Cloud" },
+                    { src: ff8Castle, alt: "FF8 Castle" },
+                    { src: mixed, alt: "Mixed" },
+                    { src: mmg, alt: "MMG" },
+                    { src: PSMagazine, alt: "PS Magazine" },
+                    { src: PSMontage, alt: "PS Montage" },
                 ]}
                 autoplayDelay={5000} 
                 navigationEnabled={true} 

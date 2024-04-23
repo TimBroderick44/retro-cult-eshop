@@ -18,6 +18,7 @@ const DetailedGameLoader = ({ game, onClose }) => {
         const handleClickOutside = (event) => {
             if (
                 // If expandedRef.current is not null and the event target is not within the expandedRef.current (i.e. the expanded book)
+                // TODO: NOT WORKING 
                 detailedRef.current &&
                 !detailedRef.current.contains(event.target)
             ) {

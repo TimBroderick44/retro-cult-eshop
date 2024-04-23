@@ -4,11 +4,9 @@ import style from "./GamesGrid.module.scss";
 import { CartContext } from "../../context/CartContext";
 import { SearchContext } from "../../context/SearchContext.jsx";
 import { useNavigate } from "react-router-dom";
-
-const handCursorUrl =
-    "https://www.dropbox.com/s/1pq4d1ksjv3tuoz/FF7Cursor.png?raw=1";
-const moveSoundUrl =
-    "https://www.dropbox.com/s/fiyx4q2mdwynraj/FF7CursorMove.mp3?raw=1";
+import handCursorUrl from "../../assets/images/FF7Cursor.png";
+import moveSoundUrl from "../../assets/sounds/FF7CursorMove.mp3";
+import PSLogo from "../../assets/images/PSLogo.png";
 
 const GamesGrid = ({ games, setGames }) => {
     const [sortCriteria, setSortCriteria] = useState(null);
@@ -268,7 +266,7 @@ const GamesGrid = ({ games, setGames }) => {
                     </div>
                     <div className={style.store}>
                         <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/134px-Playstation_logo_colour.svg.png"
+                            src={PSLogo}
                             alt="Logo"
                         />
                         Retro Cult Games

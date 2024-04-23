@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext.jsx";
 import style from "./SearchBar.module.scss";
+import google from "../../assets/images/google.svg";
 
 const SearchBar = () => {
 
@@ -35,7 +36,7 @@ const SearchBar = () => {
                     <button className={style.button}>
                         <img
                             className={style.btnIcon}
-                            src="/google.svg"
+                            src= {google}
                             alt="google magnifying glass icon"
                         />
                     </button>
