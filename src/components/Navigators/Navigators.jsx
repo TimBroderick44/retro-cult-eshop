@@ -2,12 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navigators.module.scss"; 
 import { SearchContext } from "../../context/SearchContext";
-
-// Sound and image assets
-const handCursorUrl =
-    "https://www.dropbox.com/s/1pq4d1ksjv3tuoz/FF7Cursor.png?raw=1";
-const moveSoundUrl =
-    "https://www.dropbox.com/s/fiyx4q2mdwynraj/FF7CursorMove.mp3?raw=1";
+import handCursorUrl from "../../assets/images/FF7Cursor.png";
+import moveSoundUrl from "../../assets/sounds/FF7CursorMove.mp3";
 
 function Navigators({ links }) {
     const [hoveredIndex, setHoveredIndex] = useState(null);

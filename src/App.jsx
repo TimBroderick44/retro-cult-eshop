@@ -20,7 +20,7 @@ function App() {
                         <StarsCanvas />
                         <NavBar />
                         <Routes>
-                            <Route path="/" element={<LandingPage />} />
+                            <Route path="/retro-cult-eshop" element={<LandingPage />} />
                             <Route path="/cart" element={<CartPage />} />
                             <Route path="/games" element={<GamesPage />} />
                             <Route

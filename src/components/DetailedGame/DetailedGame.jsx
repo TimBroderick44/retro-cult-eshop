@@ -9,6 +9,11 @@ import Carousel from "../../components/Carousel/Carousel.jsx";
 import CartPopup from "../../components/CartPopup/CartPopup.jsx"
 import { getStarRating } from "../../utility/utilityFunctions.js";
 import { useNavigate } from "react-router-dom";
+import PSX from "../../assets/images/PSX.png";
+import hagrid from "../../assets/images/hagrid.jpeg";
+import PSsquare from "../../assets/images/PSsquare.png";
+import PStriangle from "../../assets/images/PStriangle.png"
+import PScircle from "../../assets/images/PScircle.png";
 
 const DetailedGame = ({
     game,
@@ -55,7 +60,7 @@ const DetailedGame = ({
                     </h4>
                     <img
                         className={style.close}
-                        src="/PSX.png"
+                        src={PSX}
                         alt=""
                         onClick={onClose}
                     />
@@ -78,7 +83,7 @@ const DetailedGame = ({
                 <div className={style.content}>
                     <div className={style.imgTabs}>
                         <img
-                            src={game.background_image || "/hagrid.jpeg"}
+                            src={game.background_image || hagrid}
                             alt={game.name}
                             className={style.image}
                         />
@@ -142,16 +147,16 @@ const DetailedGame = ({
                 <div className={style.buttonContainer}>
                     <button className={style.buy} onClick={handleBuyClick}>
                         Buy
-                        <img src="/PS[].png" alt="" />
+                        <img src={PSsquare} alt="" />
                     </button>
 
                     <button className={style.like} onClick={onLike}>
                         Like
-                        <img src="/PngItem_15332.png" alt="" />
+                        <img src={PStriangle} alt="" />
                     </button>
                     <button className={style.share} onClick={onShare}>
                         Share
-                        <img src="/PS0.png" alt="" />
+                        <img src={PScircle} alt="" />
                     </button>
                 </div>
             </div>
