@@ -1,4 +1,6 @@
-<h1 style="font-weight: 900"> Retro Cult Games </h1>
+<h1 style="font-weight: 900"> Retro Cult Games - https://tim-broderick.com/RetroCult/ </h1>
+
+
 
 This is a fun mock eshop that was designed to refine my skills in React. It was a really engaging project that strogly assisted in developing my React skills. The store is specifically for geeks who love old Playstation 1 (PSX) games. 
 
