@@ -14,7 +14,7 @@ const SearchBar = () => {
         e.preventDefault();
         onSearch(inputValue);
         setInputValue("");
-        navigate("/games");
+        navigate("/RetroCult/games");
     };
 
     const handleInputChange = (e) => {

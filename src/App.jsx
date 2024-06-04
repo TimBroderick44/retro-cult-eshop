@@ -20,14 +20,14 @@ function App() {
                         <StarsCanvas />
                         <NavBar />
                         <Routes>
-                            <Route path="/retro-cult-eshop" element={<LandingPage />} />
-                            <Route path="/retro-cult-eshop/cart" element={<CartPage />} />
-                            <Route path="/retro-cult-eshop/games" element={<GamesPage />} />
+                            <Route path="/RetroCult/" element={<LandingPage />} />
+                            <Route path="/RetroCult/cart" element={<CartPage />} />
+                            <Route path="/RetroCult/games" element={<GamesPage />} />
                             <Route
-                                path="/retro-cult-eshop/games/:slug"
+                                path="/RetroCult/games/:slug"
                                 element={<GameDetailsPage />}
                             />
-                            <Route path="/retro-cult-eshop/login" element={<LoginPage />} />
+                            <Route path="/RetroCult/login" element={<LoginPage />} />
                             <Route path="*" element={<NotFoundPage />} />
                         </Routes>
                     </BrowserRouter>
