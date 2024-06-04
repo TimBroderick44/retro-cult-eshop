@@ -42,7 +42,7 @@ const GamesGrid = ({ games, setGames }) => {
 
     // When the user clicks on a game, the game page is opened (i.e. the user is navigated to the game page)
     const handleSelectGame = (game) => {
-        navigate(`/games/${game.slug}`, { state: { game } });
+        navigate(`/RetroCult/games/${game.slug}`, { state: { game } });
     };
 
     useEffect(() => {

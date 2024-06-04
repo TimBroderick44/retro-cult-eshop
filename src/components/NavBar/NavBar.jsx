@@ -10,7 +10,7 @@ const NavBar = () => {
 
     return (
         <nav className={style.nav}>
-            <NavLink className={style.store} to="/retro-cult-eshop">
+            <NavLink className={style.store} to="/RetroCult">
                     <img
                         src= {PSLogo}
                         alt="Logo"
@@ -19,10 +19,10 @@ const NavBar = () => {
             </NavLink>
             <SearchBar />
             <div className={style.buttons}>
-                <NavLink className={style.cart} to="/cart">
+                <NavLink className={style.cart} to="/RetroCult/cart">
                     <img src={trolley} alt="cart" />
                 </NavLink>
-                <NavLink className={style.login} to="/login">
+                <NavLink className={style.login} to="/RetroCult/login">
                     <img
                         src= {user}
                         alt="login"

@@ -18,11 +18,11 @@ import PSMontage from "../../assets/images/PSMontage.jpg";
 
 // Array of objects containing the path and label for each link to use later in the Navigators component
 const links = [
-    { path: "/games", label: "ALL GAMES" },
-    { path: "/games?filter=metacritic", label: "TOP 50" }, 
-    { path: "/games?filter=genre", label: "GENRE" },
-    { path: "/games?filter=sale", label: "ON SALE NOW" },
-    { path: "/games?filter=favourites", label: "OUR FAVOURITES" },
+    { path: "/RetroCult/games", label: "ALL GAMES" },
+    { path: "/RetroCult/games?filter=metacritic", label: "TOP 50" }, 
+    { path: "/RetroCult/games?filter=genre", label: "GENRE" },
+    { path: "/RetroCult/games?filter=sale", label: "ON SALE NOW" },
+    { path: "/RetroCult/games?filter=favourites", label: "OUR FAVOURITES" },
 ];
 
 const LandingPage = () => {
