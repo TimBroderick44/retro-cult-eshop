@@ -1,9 +1,10 @@
 import React from "react";
+import style from "./Loading.module.scss";
 
 const Loading = () => {
 
     return (
-        <div>
+        <div className={style.loading}>
             Loading...
         </div>
     );

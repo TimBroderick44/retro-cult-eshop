@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useLocation } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
-import GamesGrid from "../../components/GamesGrid/GamesGrid";
+import GamesGrid from "../GamesGrid/GamesGrid";
 import { DataContext } from "../../context/DataContext";
+import Loading from "../Loading/Loading"
 
 const GameLoader = () => {
     const [error, setError] = useState(null);
     const [games, setGames] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const location = useLocation();
     const { searchTerm, setSearchTerm } = useContext(SearchContext);
@@ -14,6 +16,7 @@ const GameLoader = () => {
 
 
     useEffect(() => {
+        setLoading(true);
         // Get the filter query parameter from the URL
         // If no filter is provided, default to an empty string
         const params = new URLSearchParams(location.search);
@@ -63,17 +66,16 @@ const GameLoader = () => {
         } catch (e) {
             console.error("Error filtering games:", e);
             setError(new Error("Failed to filter games."));
+        } finally {
+            setLoading(false);
         }
     }, [searchTerm, location.search, allGames]);
 
     return (
         <>
-            {games.length > 0 ? (
-                <GamesGrid games={games} setGames={setGames} />
-            ) : (
-                <div>No games found matching your search criteria.</div>
-            )}
-            {error && <div>Error: {error.message}</div>}
+            {loading && <Loading />}
+            {!loading && error && <Error message={error} />}
+            {!loading && !error && <GamesGrid games={games} setGames={setGames}/>}
         </>
     );
 };
