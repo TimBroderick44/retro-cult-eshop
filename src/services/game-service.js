@@ -1,4 +1,4 @@
-import { collection, query, getDocs, limit, where } from "firebase/firestore";
+import { collection, query, getDocs, where } from "firebase/firestore";
 import { db } from "../config/firestore";
 
 export const fetchGames = async (searchTerm = "") => {
@@ -12,15 +12,8 @@ export const fetchGames = async (searchTerm = "") => {
             throw new Error("No games found.");
         }
 
-        const searchTermLower = searchTerm.toLowerCase();
         const games = querySnapshot.docs
-            .map((doc) => ({ id: doc.id, ...doc.data() }))
-            .filter(
-                (game) =>
-                    searchTerm === "" ||
-                    game.name.toLowerCase().includes(searchTermLower)
-            );
-
+            .map((doc) => ({ id: doc.id, ...doc.data() }));
         return games;
     } catch (error) {
         console.error("Error fetching games:", error);
